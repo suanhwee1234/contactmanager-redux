@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { getContacts } from "../../actions/contactActions";
 
+
 class Contacts extends Component {
   componentDidMount() {
     this.props.getContacts();
@@ -32,4 +33,5 @@ const mapStateToProps = (state) => ({
   contacts: state.contact.contacts,
 });
 
-export default connect(mapStateToProps, { getContacts })(Contacts);
+
+export default connect(mapStateToProps, {getContacts})(Contacts);
